@@ -9,8 +9,8 @@ const Home = () => {
   return (
     <>
         <HeroSection slider={heroSlider}/>
-        <FeatureSection />
-        <CausesSection />
+        {/* <FeatureSection /> */}
+        {/* <CausesSection /> */}
     </>
   )
 }

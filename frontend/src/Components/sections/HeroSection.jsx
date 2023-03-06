@@ -18,21 +18,33 @@ const HeroSection = ({slider}) => {
 
     }, [slideIndex, slider.length])
 
+     const style = { height: '38px',
+                    width: '38px',
+                    position: 'absolute',
+                    top: '34%',
+                    left : '1.5rem',
+                    color:'#ffff',
+                    borderWidth: '1px',
+                    borderColor: '#ffff',
+                    borderRadius: '9999px',
+                    
+                    zIndex: 'auto',
+                    cursor: 'pointer',
+                    }
 
   return (
-    <section className='h-2/5'>
-        <div className="w-full  relative overflow-hidden">
-          <GoArrowSmallLeft className='arrow prev' />
+    <section className='h-[100vh]'>
+        <div className="w-full  relative ">
+          <GoArrowSmallLeft style={style} />
           <GoArrowSmallRight className='arrow next' />
-          <img className="w-full h-2/5 inset-0 bg-center object-cover backdrop-opacity-10 
-          backdrop-invert bg-black/30 blur-[1px]"
+          <img className="w-full h-2/5 inset-0 bg-center object-cover "
            src={slider[slideIndex].slideImage} alt={slider[slideIndex].alt} />
 
 
-           <div className="absolute w-4/5 md:w-2/5 h-3/4 md:h-2/5 top-12 left-11 md:top-40 md:left-56 
-            text-white p-12  bg-gray-800/40">
+           <div className="absolute w-4/5 md:w-3/6 h-3/4 md:h-2/5 top-12 left-11 md:top-36 md:left-40 
+            text-white p-11  bg-gray-800/40">
 
-            <h4 className='flex justify-center w-full md:w-3/5 -mt-10 md:mt-2 p-1 md:p-2 text-sm md:text-2xl font-bold 
+            <h4 className='flex justify-start w-5/6 md:w-3/5 -mt-9 md:mt-2 p-1 md:p-2 text-sm md:text-2xl font-bold 
             bg-white text-herpaMainBlue rounded-md'>{slider[slideIndex].textSpan}</h4>
 
             <h1 className='w-full md:w-4/5 font-mono text-white font-black
